@@ -22,10 +22,10 @@ This demo demonstrates the integration of MySQL with Sequelize in a simple stude
     ```
 3. Create a .env file in the root directory and provide your MySQL credentials
     ```
-    DB_HOST=your_mysql_host
-    DB_USER=your_mysql_user
-    DB_PASSWORD=your_mysql_password
-    DB_NAME=your_mysql_database
+    MYSQL_HOST=your_mysql_host
+    MYSQL_USERNAME=your_mysql_user
+    MYSQL_PASSWORD=your_mysql_password
+    MYSQL_DB=your_mysql_database
     ```
 
 ## To Start the Application
@@ -39,7 +39,7 @@ This demo demonstrates the integration of MySQL with Sequelize in a simple stude
    ```
 3. Open the application in your browser:
    ```
-   http://localhost:4300
+   http://localhost:3000
    ```
 
 ## To Restart the Server
