@@ -1,0 +1,28 @@
+{
+  "ignorePatterns": [
+    "dist",
+    "node_modules"
+  ],
+  "extends": ["plugin:vue/base","plugin:vue/vue3-recommended", "plugin:@typescript-eslint/recommended"],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+      "parser": "@typescript-eslint/parser"
+  },
+  "rules": {
+    "vue/no-multiple-template-root": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "vue/multi-word-component-names": ["error", {
+      "ignores": ["default", "index", "staging", "testing", "auth", "error"]
+    }],
+    "semi": ["error", "always"],
+    "@typescript-eslint/semi": ["error", "always"]
+  },
+  "overrides": [
+    {
+      "files": ["**/pages/*.vue"],
+      "rules": {
+          "vue/multi-word-component-names": 0
+      }
+    }
+  ]
+}
