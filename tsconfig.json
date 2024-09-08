@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ESNext", "DOM"],
+    "types": ["node", "vue"],
+    "skipLibCheck": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "noEmit": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@public/*": ["./public/*"],
+      "@src/*": ["./src/*"],
+      "@store/*": ["./store/*"],
+      "@server/*": ["./server/*"],
+      "@utils/*": ["./utils/*"],
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue"],
+  "exclude": ["node_modules", "dist"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
