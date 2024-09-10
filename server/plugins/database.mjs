@@ -1,6 +1,6 @@
+// database.mjs
 import { Sequelize } from 'sequelize';
 import dotenv from 'dotenv';
-
 dotenv.config();
 
 const sequelize = new Sequelize(
@@ -9,15 +9,18 @@ const sequelize = new Sequelize(
     process.env.MYSQL_PASSWORD,
     {
         host: process.env.MYSQL_HOST,
-        dialect: 'mysql'
+        dialect: 'mysql',
+        logging: console.log, // Set to true for debugging
     }
 );
 
-try {
-    await sequelize.authenticate();
-    console.log('Database connected...');
-} catch (err) {
-    console.error('Unable to connect to the database:', err);
-}
+(async () => {
+    try {
+        await sequelize.authenticate();
+        console.log('Database connected...');
+    } catch (err) {
+        console.error('Unable to connect to the database:', err);
+    }
+})();
 
 export default sequelize;

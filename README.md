@@ -28,6 +28,16 @@ This demo demonstrates the integration of MySQL with Sequelize in a simple stude
     MYSQL_DB=your_mysql_database
     ```
 
+## Create Database Tables
+```sh
+pnpm run db-migrate
+```
+
+## Add Dummy Data
+```sh
+pnpm run db-seed
+```
+
 ## To Start the Application
 1. Build the project:
    ```sh

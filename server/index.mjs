@@ -9,8 +9,6 @@ import studentRoutes from './routers/studentRoutes.mjs';
 import resultRoutes from './routers/resultRoutes.mjs';
 import examRoutes from './routers/examRoutes.mjs';
 import subjectRoutes from './routers/subjectRoutes.mjs';
-import './models/associations.mjs';
-
 dotenv.config();
 
 const app = express();

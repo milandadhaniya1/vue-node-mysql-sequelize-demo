@@ -9,6 +9,8 @@ const getStudents = async (_req, res) => {
         });
         res.status(200).json(students);
     } catch (error) {
+        // Handle errors
+        console.error('Failed to fetch students -> ', error);
         res.status(500).json({ error: 'Failed to fetch students' });
     }
 };

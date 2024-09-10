@@ -41,6 +41,7 @@ const getResultDetails = async (req, res) => {
         });
         res.status(200).json(results);
     } catch (error) {
+        console.error('Failed to fetch result details -> ', error);
         res.status(500).json({ error: 'Failed to fetch result details' });
     }
 };
